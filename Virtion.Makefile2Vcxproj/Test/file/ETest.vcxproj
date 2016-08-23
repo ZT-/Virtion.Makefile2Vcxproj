@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations" >
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals" >
+    <ProjectGuid>{bab0b1df-0b6a-9fa4-457b-b4319da2cae3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TestProject</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"  />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" >
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CLRSupport>false</CLRSupport>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"  />
+  <ImportGroup Label="ExtensionSettings"  />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" >
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"  />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" >
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" >
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USING_V110_SDK71_;OLDCRT;DYNAMIC_CRC_TABLE;BUILDFIXED;NO_GZIP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./libs/nvtt;.;./Core;./Unreal;./libs/include;./libs/PowerVR;./libs/includewin32;UmodelTool;UI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup >
+    <ClCompile Include="./libs/nvtt/nvimage/ColorBlock.cpp" />
+    <ClCompile Include="./libs/nvtt/nvimage/DirectDrawSurface.cpp" />
+    <ClCompile Include="./libs/nvtt/nvimage/Image.cpp" />
+    <ClCompile Include="Core/GLBind.cpp" />
+    <ClCompile Include="Core/GlWindow.cpp" />
+    <ClCompile Include="Viewers/SkelMeshViewer.cpp" />
+    <ClCompile Include="UmodelTool/Main.cpp" />
+    <ClCompile Include="MeshInstance/SkelMeshInstance.cpp" />
+    <ClCompile Include="Viewers/StatMeshViewer.cpp" />
+    <ClCompile Include="Viewers/VertMeshViewer.cpp" />
+    <ClCompile Include="UmodelTool/UmodelApp.cpp" />
+    <ClCompile Include="Viewers/ObjectViewer.cpp" />
+    <ClCompile Include="MeshInstance/MeshInstance.cpp" />
+    <ClCompile Include="Viewers/MeshViewer.cpp" />
+    <ClCompile Include="Unreal/UnRenderer.cpp" />
+    <ClCompile Include="Viewers/MaterialViewer.cpp" />
+    <ClCompile Include="Exporters/ExportPsk.cpp" />
+    <ClCompile Include="Exporters/ExportMd5.cpp" />
+    <ClCompile Include="MeshInstance/StatMeshInstance.cpp" />
+    <ClCompile Include="MeshInstance/VertMeshInstance.cpp" />
+    <ClCompile Include="Unreal/UnMesh2.cpp" />
+    <ClCompile Include="Unreal/UnMesh3.cpp" />
+    <ClCompile Include="Unreal/UnAnim2.cpp" />
+    <ClCompile Include="Unreal/UnAnim3.cpp" />
+    <ClCompile Include="Unreal/UnMeshBatman.cpp" />
+    <ClCompile Include="Unreal/SkeletalMesh.cpp" />
+    <ClCompile Include="Unreal/MeshCommon.cpp" />
+    <ClCompile Include="Exporters/Export3D.cpp" />
+    <ClCompile Include="Exporters/ExportMaterial.cpp" />
+    <ClCompile Include="Exporters/ExportTexture.cpp" />
+    <ClCompile Include="Exporters/Exporters.cpp" />
+    <ClCompile Include="Exporters/ExportSound.cpp" />
+    <ClCompile Include="Exporters/ExportThirdParty.cpp" />
+    <ClCompile Include="UmodelTool/StartupDialog.cpp" />
+    <ClCompile Include="UI/FileControls.cpp" />
+    <ClCompile Include="UmodelTool/PackageDialog.cpp" />
+    <ClCompile Include="UmodelTool/ProgressDialog.cpp" />
+    <ClCompile Include="UmodelTool/PackageScanDialog.cpp" />
+    <ClCompile Include="UI/BaseDialog.cpp" />
+    <ClCompile Include="Unreal/GameDatabase.cpp" />
+    <ClCompile Include="Core/CoreGL.cpp" />
+    <ClCompile Include="Unreal/GameFileSystem.cpp" />
+    <ClCompile Include="Unreal/PackageUtils.cpp" />
+    <ClCompile Include="Unreal/UnMeshBioshock.cpp" />
+    <ClCompile Include="Unreal/UnMeshRune.cpp" />
+    <ClCompile Include="Unreal/UnCore.cpp" />
+    <ClCompile Include="Unreal/UnHavok.cpp" />
+    <ClCompile Include="Unreal/UnMesh1.cpp" />
+    <ClCompile Include="Unreal/UnTexture2.cpp" />
+    <ClCompile Include="Unreal/UnTexture.cpp" />
+    <ClCompile Include="Unreal/UnTexture4.cpp" />
+    <ClCompile Include="Unreal/UnTexture3.cpp" />
+    <ClCompile Include="Unreal/UnUbisoft.cpp" />
+    <ClCompile Include="Unreal/UnObject.cpp" />
+    <ClCompile Include="Unreal/UnPackage.cpp" />
+    <ClCompile Include="Unreal/UnCoreSerialize.cpp" />
+    <ClCompile Include="Unreal/UnCoreCompression.cpp" />
+    <ClCompile Include="Core/TextContainer.cpp" />
+    <ClCompile Include="UmodelTool/MiscStrings.cpp" />
+    <ClCompile Include="Core/Core.cpp" />
+    <ClCompile Include="Core/CoreWin32.cpp" />
+    <ClCompile Include="Core/Math3D.cpp" />
+    <ClCompile Include="Core/Memory.cpp" />
+    <ClCompile Include="Unreal/UnTextureNVTT.cpp" />
+    <ClCompile Include="./libs/PowerVR/PVRTDecompress.cpp" />
+    <ClCompile Include="./libs/lzo/lzo1x_d2.c" />
+    <ClCompile Include="./libs/lzo/lzo_init.c" />
+    <ClCompile Include="./libs/mspack/lzxd.c" />
+    <ClCompile Include="./libs/nvtt/nvimage/BlockDXT.cpp" />
+    <ClCompile Include="./libs/zlib/crc32.c" />
+    <ClCompile Include="./libs/zlib/inflate.c" />
+    <ClCompile Include="./libs/zlib/inffast.c" />
+    <ClCompile Include="./libs/zlib/inftrees.c" />
+    <ClCompile Include="./libs/zlib/adler32.c" />
+    <ClCompile Include="./libs/zlib/uncompr.c" />
+  </ItemGroup>
+  <ItemGroup >
+    <ClInclude Include="Core/Core.h" />
+    <ClInclude Include="Core/CoreGL.h" />
+    <ClInclude Include="Core/GLBind.h" />
+    <ClInclude Include="Core/GLBindImpl.h" />
+    <ClInclude Include="Core/Math3D.h" />
+    <ClInclude Include="Core/Win32Types.h" />
+    <ClInclude Include="UmodelTool/Build.h" />
+    <ClInclude Include="Unreal/GameDefines.h" />
+    <ClInclude Include="Core/GlFont.h" />
+    <ClInclude Include="Core/GlWindow.h" />
+    <ClInclude Include="Core/TextContainer.h" />
+    <ClInclude Include="Unreal/Shaders.h" />
+    <ClInclude Include="Core/MathSSE.h" />
+    <ClInclude Include="Exporters/Exporters.h" />
+    <ClInclude Include="MeshInstance/MeshInstance.h" />
+    <ClInclude Include="Unreal/MeshCommon.h" />
+    <ClInclude Include="Unreal/SkeletalMesh.h" />
+    <ClInclude Include="Unreal/UnCore.h" />
+    <ClInclude Include="Unreal/UnMaterial.h" />
+    <ClInclude Include="Unreal/UnMathTools.h" />
+    <ClInclude Include="Unreal/UnMesh.h" />
+    <ClInclude Include="Unreal/UnMesh2.h" />
+    <ClInclude Include="Unreal/UnMesh3.h" />
+    <ClInclude Include="Unreal/UnObject.h" />
+    <ClInclude Include="Unreal/UnrealClasses.h" />
+    <ClInclude Include="Viewers/ObjectViewer.h" />
+    <ClInclude Include="UmodelTool/MiscStrings.h" />
+    <ClInclude Include="UmodelTool/UmodelApp.h" />
+    <ClInclude Include="UmodelTool/UmodelSettings.h" />
+    <ClInclude Include="UmodelTool/Version.h" />
+    <ClInclude Include="Unreal/GameDatabase.h" />
+    <ClInclude Include="Unreal/PackageUtils.h" />
+    <ClInclude Include="Unreal/StaticMesh.h" />
+    <ClInclude Include="Unreal/UnAnimNotify.h" />
+    <ClInclude Include="Unreal/UnMaterial2.h" />
+    <ClInclude Include="Unreal/UnMaterial3.h" />
+    <ClInclude Include="Unreal/UnPackage.h" />
+    <ClInclude Include="Unreal/UnSound.h" />
+    <ClInclude Include="Unreal/UnThirdParty.h" />
+    <ClInclude Include="Unreal/TypeConvert.h" />
+    <ClInclude Include="UI/BaseDialog.h" />
+    <ClInclude Include="UmodelTool/AboutDialog.h" />
+    <ClInclude Include="UmodelTool/ErrorDialog.h" />
+    <ClInclude Include="UmodelTool/PackageDialog.h" />
+    <ClInclude Include="UmodelTool/PackageScanDialog.h" />
+    <ClInclude Include="UmodelTool/ProgressDialog.h" />
+    <ClInclude Include="UmodelTool/StartupDialog.h" />
+    <ClInclude Include="UmodelTool/res/resource.h" />
+    <ClInclude Include="libs/include/callback.hpp" />
+    <ClInclude Include="Exporters/Psk.h" />
+    <ClInclude Include="Unreal/UnMeshTypes.h" />
+    <ClInclude Include="Unreal/UnTextureNVTT.h" />
+    <ClInclude Include="UI/FileControls.h" />
+    <ClInclude Include="Unreal/GameFileSystem.h" />
+    <ClInclude Include="Unreal/UnArchiveObb.h" />
+    <ClInclude Include="Unreal/UnArchivePak.h" />
+    <ClInclude Include="Unreal/UnHavok.h" />
+    <ClInclude Include="libs/include/lzo/lzo1x.h" />
+    <ClInclude Include="libs/include/lzo/lzoconf.h" />
+    <ClInclude Include="libs/include/lzo/lzodefs.h" />
+    <ClInclude Include="libs/include/mspack/lzx.h" />
+    <ClInclude Include="libs/include/mspack/mspack.h" />
+    <ClInclude Include="libs/include/zlib/zconf.h" />
+    <ClInclude Include="libs/include/zlib/zlib.h" />
+    <ClInclude Include="libs/PowerVR/PVRTDecompress.h" />
+    <ClInclude Include="libs/PowerVR/PVRTGlobal.h" />
+    <ClInclude Include="libs/PowerVR/PVRTTexture.h" />
+    <ClInclude Include="libs/lzo/config1x.h" />
+    <ClInclude Include="libs/lzo/lzo_conf.h" />
+    <ClInclude Include="libs/lzo/lzo_dict.h" />
+    <ClInclude Include="libs/lzo/lzo_ptr.h" />
+    <ClInclude Include="libs/lzo/miniacc.h" />
+    <ClInclude Include="libs/mspack/readbits.h" />
+    <ClInclude Include="libs/mspack/readhuff.h" />
+    <ClInclude Include="libs/mspack/system.h" />
+    <ClInclude Include="libs/nvtt/nvimage/BlockDXT.h" />
+    <ClInclude Include="libs/nvtt/nvimage/ColorBlock.h" />
+    <ClInclude Include="libs/zlib/crc32.h" />
+    <ClInclude Include="libs/zlib/zconf.h" />
+    <ClInclude Include="libs/zlib/zlib.h" />
+    <ClInclude Include="libs/zlib/zutil.h" />
+    <ClInclude Include="libs/zlib/inffast.h" />
+    <ClInclude Include="libs/zlib/inffixed.h" />
+    <ClInclude Include="libs/zlib/inflate.h" />
+    <ClInclude Include="libs/zlib/inftrees.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"  />
+  <ImportGroup Label="ExtensionTargets"  />
+</Project>
