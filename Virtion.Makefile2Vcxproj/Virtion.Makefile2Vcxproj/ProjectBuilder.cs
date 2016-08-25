@@ -151,10 +151,26 @@ namespace Virtion.Makefile2Vcxproj
 
         private Link CreateLink()
         {
+            string libPathString = "";
+            foreach (var name in parser.LibPathList)
+            {
+                libPathString += name + ";";
+            }
+            libPathString += "%(AdditionalLibraryDirectories)";
+
+            string libString = "";
+            foreach (var name in parser.LibList)
+            {
+                libString += name + ";";
+            }
+            libString += "%(AdditionalDependencies)";
+
             var item = new Link()
             {
                 SubSystem = "Console",
-                GenerateDebugInformation = true
+                GenerateDebugInformation = "true",
+                AdditionalLibraryDirectories = libPathString,
+                AdditionalDependencies = libString
             };
             return item;
         }
@@ -198,6 +214,16 @@ namespace Virtion.Makefile2Vcxproj
             return item;
         }
 
+        private ItemGroup CreateRcGroup()
+        {
+            var item = new ItemGroup();
+            item.ResourceCompiles = new List<ResourceCompile>();
+            item.ResourceCompiles.Add(new ResourceCompile()
+            {
+                Include = parser.RcPath
+            });
+            return item;
+        }
 
         private Import CreateTargetsImport()
         {
@@ -216,7 +242,7 @@ namespace Virtion.Makefile2Vcxproj
             return item;
         }
 
-        public void BuildProject(string path)
+        public void BuildProject(string name, string rootPath)
         {
             var project = new Project();
             project.ProjectHeader = CreateProjectHeader();
@@ -231,12 +257,13 @@ namespace Virtion.Makefile2Vcxproj
             project.ComplierItemDefinitionGroup = CreateComplierItemDefinitionGroup();
             project.SourceItemGroup = CreateSourceGroup();
             project.HeaderItemGroup = CreateHeaderGroup();
+            project.ResItemGroup = CreateRcGroup();
             project.TargetsImport = CreateTargetsImport();
             project.ExtensionTargetsImportGroup = CreateExtensionTargets();
 
-
+            string path = rootPath + name + ".vcxproj";
             ObjectToXml.Load(project, path);
-
+            Console.WriteLine(">" + path);
         }
 
 

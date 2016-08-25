@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup >
+    <Filter Include="Source">
+      <UniqueIdentifier>{0a8f0adb-1d1a-ba37-43c3-0ebe79ca80d7}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{2450d853-04e8-8124-4754-18fa3da0d50c}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{db779827-8c4f-8a91-408a-daea5956cb85}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup >
+    <ClCompile Include="./libs/nvtt/nvimage/ColorBlock.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/nvtt/nvimage/DirectDrawSurface.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/nvtt/nvimage/Image.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Core/GLBind.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Core/GlWindow.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewers/SkelMeshViewer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UmodelTool/Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshInstance/SkelMeshInstance.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewers/StatMeshViewer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewers/VertMeshViewer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UmodelTool/UmodelApp.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewers/ObjectViewer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshInstance/MeshInstance.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewers/MeshViewer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnRenderer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewers/MaterialViewer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporters/ExportPsk.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporters/ExportMd5.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshInstance/StatMeshInstance.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshInstance/VertMeshInstance.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnMesh2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnMesh3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnAnim2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnAnim3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnMeshBatman.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/SkeletalMesh.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/MeshCommon.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporters/Export3D.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporters/ExportMaterial.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporters/ExportTexture.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporters/Exporters.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporters/ExportSound.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Exporters/ExportThirdParty.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UmodelTool/StartupDialog.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI/FileControls.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UmodelTool/PackageDialog.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UmodelTool/ProgressDialog.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UmodelTool/PackageScanDialog.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UI/BaseDialog.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/GameDatabase.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Core/CoreGL.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/GameFileSystem.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/PackageUtils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnMeshBioshock.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnMeshRune.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnCore.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnHavok.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnMesh1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnTexture2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnTexture.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnTexture4.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnTexture3.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnUbisoft.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnObject.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnPackage.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnCoreSerialize.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnCoreCompression.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Core/TextContainer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="UmodelTool/MiscStrings.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Core/Core.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Core/CoreWin32.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Core/Math3D.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Core/Memory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Unreal/UnTextureNVTT.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/PowerVR/PVRTDecompress.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/lzo/lzo1x_d2.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/lzo/lzo_init.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/mspack/lzxd.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/nvtt/nvimage/BlockDXT.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/zlib/crc32.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/zlib/inflate.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/zlib/inffast.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/zlib/inftrees.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/zlib/adler32.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="./libs/zlib/uncompr.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup >
+    <ClInclude Include="Core/Core.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/CoreGL.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/GLBind.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/GLBindImpl.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/Math3D.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/Win32Types.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/Build.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/GameDefines.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/GlFont.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/GlWindow.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/TextContainer.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/Shaders.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core/MathSSE.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Exporters/Exporters.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshInstance/MeshInstance.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/MeshCommon.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/SkeletalMesh.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnCore.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnMaterial.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnMathTools.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnMesh.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnMesh2.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnMesh3.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnObject.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnrealClasses.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewers/ObjectViewer.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/MiscStrings.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/UmodelApp.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/UmodelSettings.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/Version.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/GameDatabase.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/PackageUtils.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/StaticMesh.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnAnimNotify.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnMaterial2.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnMaterial3.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnPackage.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnSound.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnThirdParty.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/TypeConvert.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UI/BaseDialog.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/AboutDialog.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/ErrorDialog.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/PackageDialog.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/PackageScanDialog.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/ProgressDialog.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/StartupDialog.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UmodelTool/res/resource.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/include/callback.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Exporters/Psk.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnMeshTypes.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnTextureNVTT.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="UI/FileControls.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/GameFileSystem.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnArchiveObb.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnArchivePak.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Unreal/UnHavok.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/include/lzo/lzo1x.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/include/lzo/lzoconf.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/include/lzo/lzodefs.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/include/mspack/lzx.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/include/mspack/mspack.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/include/zlib/zconf.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/include/zlib/zlib.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/PowerVR/PVRTDecompress.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/PowerVR/PVRTGlobal.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/PowerVR/PVRTTexture.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/lzo/config1x.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/lzo/lzo_conf.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/lzo/lzo_dict.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/lzo/lzo_ptr.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/lzo/miniacc.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/mspack/readbits.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/mspack/readhuff.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/mspack/system.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/nvtt/nvimage/BlockDXT.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/nvtt/nvimage/ColorBlock.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/zlib/crc32.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/zlib/zconf.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/zlib/zlib.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/zlib/zutil.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/zlib/inffast.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/zlib/inffixed.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/zlib/inflate.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="libs/zlib/inftrees.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup >
+    <ResourceCompile Include="UmodelTool/res/umodel.rc">
+      <Filter>Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

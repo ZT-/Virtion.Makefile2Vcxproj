@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
 using Virtion.helper;
 
 namespace Virtion.Makefile2Vcxproj
 {
-    class OBJCommand
+    public class OBJCommand
     {
         public string Target;
         public List<string> Command;
@@ -17,16 +16,20 @@ namespace Virtion.Makefile2Vcxproj
         }
     }
 
-    class MakeFileParser
+    public class MakeFileParser
     {
         public List<String> CommandLine;
         public List<OBJCommand> ObjCommands;
         public Dictionary<string, string> VariableMap;
         public List<string> ClArgList;
+        public List<string> LinkArgList;
         public List<string> IncludeList;
         public List<string> DefineList;
         public List<string> SourceList;
         public List<string> HeaderList;
+        public List<string> LibPathList;
+        public List<string> LibList;
+        public string RcPath;
 
         public MakeFileParser()
         {
@@ -37,6 +40,9 @@ namespace Virtion.Makefile2Vcxproj
             this.DefineList = new List<string>();
             this.SourceList = new List<string>();
             this.HeaderList = new List<string>();
+            this.LibPathList = new List<string>();
+            this.LibList = new List<string>();
+            this.LinkArgList = new List<string>();
         }
 
         private bool IsBlankLine(string s)
@@ -104,15 +110,6 @@ namespace Virtion.Makefile2Vcxproj
             return true;
         }
 
-        private string StringTrim(string s)
-        {
-            if (string.IsNullOrEmpty(s) == true)
-            {
-                return s;
-            }
-            return s.Trim();
-        }
-
         private void ParserVariable(string s)
         {
             int index = s.IndexOf("=");
@@ -134,7 +131,7 @@ namespace Virtion.Makefile2Vcxproj
             return s;
         }
 
-        private void FilterOBJCommand()
+        private void FilterObjCommand()
         {
             this.ObjCommands = new List<OBJCommand>();
             bool needNext = false;
@@ -193,13 +190,14 @@ namespace Virtion.Makefile2Vcxproj
             return false;
         }
 
-        private void AnalysisCl(string s)
+        private bool AnalysisCl(string s)
         {
             if (s.IndexOf("cl.exe", StringComparison.OrdinalIgnoreCase) < 0)
             {
-                return;
+                return false;
             }
             StringStream stringStream = new StringStream(s);
+            stringStream.ReadString();//read "cl.exe" and discard it
             while (stringStream.IsEof() == false)
             {
                 string arg = stringStream.ReadString();
@@ -209,7 +207,7 @@ namespace Virtion.Makefile2Vcxproj
                     if (this.IncludeList.IndexOf(arg) < 0)
                     {
                         IncludeList.Add(arg);
-                        Console.WriteLine(arg);
+                        //Console.WriteLine(arg);
                     }
                     continue;
                 }
@@ -220,7 +218,7 @@ namespace Virtion.Makefile2Vcxproj
                     if (this.DefineList.IndexOf(arg) < 0)
                     {
                         DefineList.Add(arg);
-                        Console.WriteLine(arg);
+                        //Console.WriteLine(arg);
                     }
                     continue;
                 }
@@ -228,9 +226,10 @@ namespace Virtion.Makefile2Vcxproj
                 if (ClArgList.IndexOf(arg) < 0)
                 {
                     ClArgList.Add(arg);
-                    Console.WriteLine(arg);
+                    //Console.WriteLine(arg);
                 }
             }
+            return true;
         }
 
         private void AnalysisFile(string s)
@@ -244,7 +243,7 @@ namespace Virtion.Makefile2Vcxproj
                     if (this.SourceList.IndexOf(arg) < 0)
                     {
                         this.SourceList.Add(arg);
-                        Console.WriteLine(arg);
+                        //Console.WriteLine(arg);
                     }
                     continue;
                 }
@@ -253,16 +252,66 @@ namespace Virtion.Makefile2Vcxproj
                     if (this.HeaderList.IndexOf(arg) < 0)
                     {
                         this.HeaderList.Add(arg);
-                        Console.WriteLine(arg);
+                        //Console.WriteLine(arg);
                     }
                     continue;
                 }
             }
         }
 
+        private bool AnlysisLink(string s)
+        {
+            if (s.IndexOf("link.exe", StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                return false;
+            }
+            StringStream stringStream = new StringStream(s);
+            stringStream.ReadString();//read "link.exe" and discard it
+            while (stringStream.IsEof() == false)
+            {
+                string arg = stringStream.ReadString();
+
+                if (arg.StartsWith("-libpath", StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    string match = "-libpath";
+                    string path = arg.Substring(match.Length + 1);
+                    this.LibPathList.Add(path);
+                    continue;
+                }
+                if (arg.StartsWith("-") == false && arg.EndsWith(".lib", StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    this.LibList.Add(arg);
+                    continue;
+                }
+
+                this.LinkArgList.Add(arg);
+            }
+
+            return true;
+        }
+
+        private bool AnlysisRc(string s)
+        {
+            if (s.IndexOf("rc.exe", StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                return false;
+            }
+            StringStream stringStream = new StringStream(s);
+            while (stringStream.IsEof() == false)
+            {
+                string arg = stringStream.ReadString();
+                if (arg.StartsWith("-") == false && arg.EndsWith(".rc", StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    RcPath = arg;
+                    break;
+                }
+            }
+            return true;
+        }
+
         public bool StartParse()
         {
-            this.FilterOBJCommand();
+            this.FilterObjCommand();
             if (this.ObjCommands.Count == 0)
             {
                 return false;
@@ -274,13 +323,23 @@ namespace Virtion.Makefile2Vcxproj
                 //Console.WriteLine(command.Target);
                 foreach (var c in command.Command)
                 {
-                    AnalysisCl(c);
+                    if (AnalysisCl(c) == true)
+                    {
+                        continue;
+                    }
+                    if (AnlysisLink(c) == true)
+                    {
+                        continue;
+                    }
+                    if (AnlysisRc(c) == true)
+                    {
+                        continue;
+                    }
                     // Console.WriteLine(c);
                 }
             }
             return true;
         }
-
 
 
     }

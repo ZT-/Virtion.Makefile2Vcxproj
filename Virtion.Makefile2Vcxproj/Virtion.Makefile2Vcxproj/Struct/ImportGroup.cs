@@ -10,6 +10,7 @@ namespace Virtion.Makefile2Vcxproj.Struct
     {
         [XmlAttribute]
         public string Label;
+
         [XmlAttribute]
         public string Condition;
 
@@ -18,6 +19,15 @@ namespace Virtion.Makefile2Vcxproj.Struct
 
         [XmlElement("ClCompile")]
         public List<ClCompile> ClCompiles;
+
+        [XmlElement("ClCompile")]
+        public List<ClInclude> ClIncludes;
+
+        [XmlElement("ClCompile")]
+        public List<ResourceCompile> ResourceCompiles;
+
+        [XmlElement("Filter")]
+        public List<Filter> Filters;
 
     }
 }

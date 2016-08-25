@@ -8,6 +8,9 @@ namespace Virtion.Makefile2Vcxproj.Struct
     public class Link
     {
         public string SubSystem;
-        public bool GenerateDebugInformation;
+        public string GenerateDebugInformation;
+        public string AdditionalLibraryDirectories;
+        public string AdditionalDependencies;
+        public string AdditionalOptions;
     }
 }

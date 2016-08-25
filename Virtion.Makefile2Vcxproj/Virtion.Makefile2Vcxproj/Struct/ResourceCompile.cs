@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Virtion.Makefile2Vcxproj.Struct
 {
-   public class ClInclude
+    public class ResourceCompile
     {
-       [XmlAttribute]
-       public string Include;
+        [XmlAttribute]
+        public string Include;
 
-       public string Filter;
+        public string Filter;
     }
 }

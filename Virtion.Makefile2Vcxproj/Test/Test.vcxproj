@@ -7,7 +7,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals" >
-    <ProjectGuid>{bab0b1df-0b6a-9fa4-457b-b4319da2cae3}</ProjectGuid>
+    <ProjectGuid>{a1b9c045-5d0c-9cf9-4e28-8a8381117594}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>TestProject</RootNamespace>
   </PropertyGroup>
@@ -16,6 +16,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <CLRSupport>false</CLRSupport>
     <LinkIncremental>false</LinkIncremental>
@@ -40,6 +41,9 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>./libs/SDL2/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;./../Libs/msvcrt/lib/Win32/msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup >
@@ -205,6 +209,9 @@
     <ClInclude Include="libs/zlib/inffixed.h" />
     <ClInclude Include="libs/zlib/inflate.h" />
     <ClInclude Include="libs/zlib/inftrees.h" />
+  </ItemGroup>
+  <ItemGroup >
+    <ResourceCompile Include="UmodelTool/res/umodel.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"  />
   <ImportGroup Label="ExtensionTargets"  />
